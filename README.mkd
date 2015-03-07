@@ -1,0 +1,22 @@
+go-bytesstorage
+============
+Provide way to hold the bytes sent over the write of io.writer.
+
+Usage
+-----
+```go
+w := bs.NewBytesStorage()
+
+tmpl, _ := template.New("test").Parse("{{.Id}}: {{.Score}}")
+tmpl.Execute(w, map[string]string{"Id": "abc", "Score": "100"})
+
+string(w.Load()) == "abc: 100"
+```
+
+Author
+------
+wara <kusabashira227@gmail.com>
+
+License
+-------
+MIT License
