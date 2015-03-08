@@ -1,3 +1,5 @@
+// Package bs provides a storage
+// to hold the bytes sent over the write of io.writer.
 package bs
 
 // BytesStorage is a storage to hold the bytes sent over the write of io.writer.

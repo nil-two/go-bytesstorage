@@ -8,6 +8,18 @@ import (
 	"github.com/kusabashira/go-bytesstorage"
 )
 
+func Example() {
+	w := bs.NewBytesStorage()
+
+	tmpl, _ := template.New("test").Parse("{{.Id}}: {{.Score}}")
+	tmpl.Execute(w, map[string]string{"Id": "abc", "Score": "100"})
+
+	fmt.Println(string(w.Load()))
+	// Output:
+	// abc: 100
+}
+
+
 func TestLoadSimple(t *testing.T) {
 	w := bs.NewBytesStorage()
 	fmt.Fprint(w, "abc")
