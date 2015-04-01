@@ -2,6 +2,18 @@ go-bytesstorage
 ============
 Provide way to hold the bytes sent over the write of io.writer.
 
+Deprecation Warning
+-----
+It can do the same thing by standard library.
+Like this.
+```go
+w := bytes.NewBuffer(make([]byte, 0))
+tmpl, _ := template.New("test").Parse("{{.Id}}: {{.Score}}")
+tmpl.Execute(w, map[string]string{"Id": "abc", "Score": "100"})
+w.String() == "abc: 100"
+```
+I won't delete this repository, but I don't recommend use it.
+
 Usage
 -----
 ```go
