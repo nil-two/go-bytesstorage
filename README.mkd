@@ -12,7 +12,6 @@ tmpl, _ := template.New("test").Parse("{{.Id}}: {{.Score}}")
 tmpl.Execute(w, map[string]string{"Id": "abc", "Score": "100"})
 w.String() == "abc: 100"
 ```
-I won't delete this repository, but I don't recommend use it.
 
 Usage
 -----
