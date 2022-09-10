@@ -5,7 +5,7 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/nil2nekoni/go-bytesstorage"
+	"github.com/nil-two/go-bytesstorage"
 )
 
 func Example() {
